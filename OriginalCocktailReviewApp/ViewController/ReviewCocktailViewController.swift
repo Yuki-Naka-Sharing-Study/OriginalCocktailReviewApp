@@ -41,7 +41,7 @@ class ReviewCocktailViewController: UIViewController {
         
         if segue.identifier == "cellSegue" {
             let indexPath = self.tableView.indexPathForSelectedRow
-            DisplaycCocktailViewController.book = cocktailArray[indexPath!.row]
+            DisplayCocktailViewController.cocktail = cocktailArray[indexPath!.row]
         }
         
     }

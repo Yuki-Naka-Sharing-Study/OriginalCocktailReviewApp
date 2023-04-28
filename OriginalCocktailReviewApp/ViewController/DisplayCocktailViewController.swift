@@ -11,6 +11,13 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
     @IBOutlet weak var cocktailMakeLabel: UILabel!
     @IBOutlet weak var cocktailReviewLabel: UILabel!
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        setCocktail(cocktail)
+        
+    }
+    
     @IBAction func deleteCocktailData(_ sender: Any) {
         // データベースから削除する
         try! realm.write {
@@ -26,13 +33,6 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
     @IBAction func Close(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
-        
-    }
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        setCocktail(cocktail)
         
     }
     // CocktailImageTableViewCell から参考にしたコード

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		202BCD542E6A0E07A7A09D34 /* Pods_OriginalCocktailReviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242ABF6C177D4D0F70903A67 /* Pods_OriginalCocktailReviewApp.framework */; };
+		D17B2AFA29FC07B000858941 /* CocktailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17B2AF829FC07B000858941 /* CocktailImageTableViewCell.swift */; };
+		D17B2AFB29FC07B000858941 /* CocktailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17B2AF929FC07B000858941 /* CocktailImageTableViewCell.xib */; };
 		D1C1B9D729FBAD8A00954BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9D629FBAD8A00954BA0 /* AppDelegate.swift */; };
 		D1C1B9D929FBAD8A00954BA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9D829FBAD8A00954BA0 /* SceneDelegate.swift */; };
 		D1C1B9DB29FBAD8A00954BA0 /* RegisterCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9DA29FBAD8A00954BA0 /* RegisterCocktailViewController.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		242ABF6C177D4D0F70903A67 /* Pods_OriginalCocktailReviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OriginalCocktailReviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA14EEB52486D59625C6BC1C /* Pods-OriginalCocktailReviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OriginalCocktailReviewApp.debug.xcconfig"; path = "Target Support Files/Pods-OriginalCocktailReviewApp/Pods-OriginalCocktailReviewApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D17B2AF829FC07B000858941 /* CocktailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailImageTableViewCell.swift; sourceTree = "<group>"; };
+		D17B2AF929FC07B000858941 /* CocktailImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailImageTableViewCell.xib; sourceTree = "<group>"; };
 		D1C1B9D329FBAD8A00954BA0 /* OriginalCocktailReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OriginalCocktailReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C1B9D629FBAD8A00954BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1C1B9D829FBAD8A00954BA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +60,25 @@
 				BA14EEB52486D59625C6BC1C /* Pods-OriginalCocktailReviewApp.debug.xcconfig */,
 				D8A4EB8499792BEEF8A8794E /* Pods-OriginalCocktailReviewApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D17B2AF629FC075800858941 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D1C1B9DC29FBAD8A00954BA0 /* Main.storyboard */,
+				D1C1B9E129FBAD8C00954BA0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D17B2AF729FC077000858941 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D17B2AF829FC07B000858941 /* CocktailImageTableViewCell.swift */,
+				D17B2AF929FC07B000858941 /* CocktailImageTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D1C1B9CA29FBAD8A00954BA0 = {
@@ -81,12 +102,12 @@
 		D1C1B9D529FBAD8A00954BA0 /* OriginalCocktailReviewApp */ = {
 			isa = PBXGroup;
 			children = (
+				D17B2AF629FC075800858941 /* Storyboard */,
 				D1C1B9EC29FBAE0200954BA0 /* Model */,
 				D1C1B9EB29FBADF200954BA0 /* ViewController */,
 				D1C1B9EA29FBADD400954BA0 /* Delegate */,
-				D1C1B9DC29FBAD8A00954BA0 /* Main.storyboard */,
+				D17B2AF729FC077000858941 /* Cell */,
 				D1C1B9DF29FBAD8C00954BA0 /* Assets.xcassets */,
-				D1C1B9E129FBAD8C00954BA0 /* LaunchScreen.storyboard */,
 				D1C1B9E429FBAD8C00954BA0 /* Info.plist */,
 			);
 			path = OriginalCocktailReviewApp;
@@ -188,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17B2AFB29FC07B000858941 /* CocktailImageTableViewCell.xib in Resources */,
 				D1C1B9E329FBAD8C00954BA0 /* LaunchScreen.storyboard in Resources */,
 				D1C1B9E029FBAD8C00954BA0 /* Assets.xcassets in Resources */,
 				D1C1B9DE29FBAD8A00954BA0 /* Main.storyboard in Resources */,
@@ -243,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17B2AFA29FC07B000858941 /* CocktailImageTableViewCell.swift in Sources */,
 				D1C1B9F529FBAF1200954BA0 /* Cocktail.swift in Sources */,
 				D1C1B9DB29FBAD8A00954BA0 /* RegisterCocktailViewController.swift in Sources */,
 				D1C1B9D729FBAD8A00954BA0 /* AppDelegate.swift in Sources */,
