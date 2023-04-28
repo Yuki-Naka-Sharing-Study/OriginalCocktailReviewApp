@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		202BCD542E6A0E07A7A09D34 /* Pods_OriginalCocktailReviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242ABF6C177D4D0F70903A67 /* Pods_OriginalCocktailReviewApp.framework */; };
 		D1C1B9D729FBAD8A00954BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9D629FBAD8A00954BA0 /* AppDelegate.swift */; };
 		D1C1B9D929FBAD8A00954BA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9D829FBAD8A00954BA0 /* SceneDelegate.swift */; };
 		D1C1B9DB29FBAD8A00954BA0 /* RegisterCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9DA29FBAD8A00954BA0 /* RegisterCocktailViewController.swift */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		242ABF6C177D4D0F70903A67 /* Pods_OriginalCocktailReviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OriginalCocktailReviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA14EEB52486D59625C6BC1C /* Pods-OriginalCocktailReviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OriginalCocktailReviewApp.debug.xcconfig"; path = "Target Support Files/Pods-OriginalCocktailReviewApp/Pods-OriginalCocktailReviewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D1C1B9D329FBAD8A00954BA0 /* OriginalCocktailReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OriginalCocktailReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C1B9D629FBAD8A00954BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1C1B9D829FBAD8A00954BA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		D1C1B9EF29FBAEA300954BA0 /* ReviewCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCocktailViewController.swift; sourceTree = "<group>"; };
 		D1C1B9F129FBAECC00954BA0 /* DisplayCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCocktailViewController.swift; sourceTree = "<group>"; };
 		D1C1B9F429FBAF1200954BA0 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		D8A4EB8499792BEEF8A8794E /* Pods-OriginalCocktailReviewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OriginalCocktailReviewApp.release.xcconfig"; path = "Target Support Files/Pods-OriginalCocktailReviewApp/Pods-OriginalCocktailReviewApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202BCD542E6A0E07A7A09D34 /* Pods_OriginalCocktailReviewApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B089D451EECA33C6A4A647E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA14EEB52486D59625C6BC1C /* Pods-OriginalCocktailReviewApp.debug.xcconfig */,
+				D8A4EB8499792BEEF8A8794E /* Pods-OriginalCocktailReviewApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D1C1B9CA29FBAD8A00954BA0 = {
 			isa = PBXGroup;
 			children = (
 				D1C1B9D529FBAD8A00954BA0 /* OriginalCocktailReviewApp */,
 				D1C1B9D429FBAD8A00954BA0 /* Products */,
+				8B089D451EECA33C6A4A647E /* Pods */,
+				D6EE3AF6AA675752FD77B15C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +120,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D6EE3AF6AA675752FD77B15C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				242ABF6C177D4D0F70903A67 /* Pods_OriginalCocktailReviewApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,10 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1C1B9E729FBAD8C00954BA0 /* Build configuration list for PBXNativeTarget "OriginalCocktailReviewApp" */;
 			buildPhases = (
-				D1C1B9F829FBD1AB00954BA0 /* Fix SPM */,
+				6C2B3F87443FA94BDC30CE8D /* [CP] Check Pods Manifest.lock */,
 				D1C1B9CF29FBAD8A00954BA0 /* Sources */,
 				D1C1B9D029FBAD8A00954BA0 /* Frameworks */,
 				D1C1B9D129FBAD8A00954BA0 /* Resources */,
+				CDE17D2FCD9C7500495708DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,10 +174,6 @@
 				Base,
 			);
 			mainGroup = D1C1B9CA29FBAD8A00954BA0;
-			packageReferences = (
-				D1C1B9F629FBC5FB00954BA0 /* XCRemoteSwiftPackageReference "CLImageEditor" */,
-				D1C1B9F729FBC60A00954BA0 /* XCRemoteSwiftPackageReference "realm-swift" */,
-			);
 			productRefGroup = D1C1B9D429FBAD8A00954BA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,7 +197,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D1C1B9F829FBD1AB00954BA0 /* Fix SPM */ = {
+		6C2B3F87443FA94BDC30CE8D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,15 +205,36 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Fix SPM";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OriginalCocktailReviewApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Tyif [ -d \"${SYMROOT}/Release${EFFECTIVE_PLATFORM_NAME}/\" ] && [ \"${SYMROOT}/Release${EFFECTIVE_PLATFORM_NAME}/\" != \"${SYMROOT}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/\" ] \nthen\n  cp -f -R \"${SYMROOT}/Release${EFFECTIVE_PLATFORM_NAME}/\" \"${SYMROOT}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/\"\nfipe a script or drag a script file from your workspace to insert its path.\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDE17D2FCD9C7500495708DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OriginalCocktailReviewApp/Pods-OriginalCocktailReviewApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OriginalCocktailReviewApp/Pods-OriginalCocktailReviewApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OriginalCocktailReviewApp/Pods-OriginalCocktailReviewApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -352,6 +395,7 @@
 		};
 		D1C1B9E829FBAD8C00954BA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA14EEB52486D59625C6BC1C /* Pods-OriginalCocktailReviewApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +426,7 @@
 		};
 		D1C1B9E929FBAD8C00954BA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8A4EB8499792BEEF8A8794E /* Pods-OriginalCocktailReviewApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -432,25 +477,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D1C1B9F629FBC5FB00954BA0 /* XCRemoteSwiftPackageReference "CLImageEditor" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/yackle/CLImageEditor";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		D1C1B9F729FBC60A00954BA0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = D1C1B9CB29FBAD8A00954BA0 /* Project object */;
 }
