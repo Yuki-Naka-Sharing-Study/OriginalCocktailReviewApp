@@ -2,7 +2,6 @@ import UIKit
 
 class CocktailImageTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var cocktailImageView: UIImageView!
     @IBOutlet weak var cocktailNameLabel: UILabel!
     

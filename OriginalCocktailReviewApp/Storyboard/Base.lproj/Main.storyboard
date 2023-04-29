@@ -163,7 +163,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="カクテルを登録" image="wineglass.fill" catalog="system" id="Zau-r4-KL0"/>
                     <connections>
-                        <outlet property="cocktailImageView" destination="hRk-FU-po4" id="vIw-dg-yDB"/>
+                        <outlet property="cocktailImageView" destination="hRk-FU-po4" id="jal-9j-3yR"/>
                         <outlet property="cocktailMakeTextView" destination="rbC-Ah-pbw" id="a0z-e8-IU6"/>
                         <outlet property="cocktailNameTextField" destination="adC-dV-98J" id="Ycc-dg-cws"/>
                         <outlet property="cocktailReviewTextView" destination="bk9-tJ-zkq" id="9Nk-NW-0hB"/>
