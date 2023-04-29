@@ -1,0 +1,51 @@
+
+/* Class = "UIButton"; configuration.title = "画面を閉じる"; ObjectID = "8gQ-7e-Dqi"; */
+"8gQ-7e-Dqi.configuration.title" = "画面を閉じる";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8gQ-7e-Dqi"; */
+"8gQ-7e-Dqi.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "カクテルを管理"; ObjectID = "Cjf-7t-7X8"; */
+"Cjf-7t-7X8.configuration.title" = "カクテルを管理";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Cjf-7t-7X8"; */
+"Cjf-7t-7X8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "カクテルの名前"; ObjectID = "H9J-iU-PHc"; */
+"H9J-iU-PHc.text" = "カクテルの名前";
+
+/* Class = "UILabel"; text = "カクテルの感想を記入"; ObjectID = "SlH-d8-bNQ"; */
+"SlH-d8-bNQ.text" = "カクテルの感想を記入";
+
+/* Class = "UILabel"; text = "カクテルの感想"; ObjectID = "XRn-Dc-cUc"; */
+"XRn-Dc-cUc.text" = "カクテルの感想";
+
+/* Class = "UILabel"; text = "カクテルの作り方"; ObjectID = "Z80-HR-p32"; */
+"Z80-HR-p32.text" = "カクテルの作り方";
+
+/* Class = "UITabBarItem"; title = "カクテルを登録"; ObjectID = "Zau-r4-KL0"; */
+"Zau-r4-KL0.title" = "カクテルを登録";
+
+/* Class = "UILabel"; text = "カクテルの写真を撮ってください"; ObjectID = "Ze8-fP-0dO"; */
+"Ze8-fP-0dO.text" = "カクテルの写真を撮ってください";
+
+/* Class = "UILabel"; text = "カクテルの作り方を記入"; ObjectID = "av5-Ag-Mqk"; */
+"av5-Ag-Mqk.text" = "カクテルの作り方を記入";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "bk9-tJ-zkq"; */
+"bk9-tJ-zkq.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "カクテルの名前を記入"; ObjectID = "hpo-Fc-GQB"; */
+"hpo-Fc-GQB.text" = "カクテルの名前を記入";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "rbC-Ah-pbw"; */
+"rbC-Ah-pbw.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITabBarItem"; title = "カクテルを管理"; ObjectID = "u5M-Rs-9BG"; */
+"u5M-Rs-9BG.title" = "カクテルを管理";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wdG-5V-Jcp"; */
+"wdG-5V-Jcp.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yfZ-Bx-D1Z"; */
+"yfZ-Bx-D1Z.normalTitle" = "Button";
