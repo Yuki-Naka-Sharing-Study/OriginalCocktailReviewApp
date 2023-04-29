@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GGc-Ec-zvx">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DisplayCocktailViewController" customModule="OriginalCocktailReviewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdG-5V-Jcp">
@@ -63,6 +63,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="a7L-xD-12P"/>
                     <connections>
                         <outlet property="cocktailImageView" destination="xde-Jx-Di1" id="pHq-ut-nVE"/>
                         <outlet property="cocktailMakeLabel" destination="Z80-HR-p32" id="hyp-9D-pdn"/>
@@ -72,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481.679389312977" y="-421.12676056338029"/>
+            <point key="canvasLocation" x="1466" y="-421"/>
         </scene>
         <!--カクテルを登録-->
         <scene sceneID="Vzh-Hy-Rbe">
@@ -192,6 +193,7 @@
                     <tabBarItem key="tabBarItem" title="カクテルを管理" image="wineglass" catalog="system" id="u5M-Rs-9BG"/>
                     <connections>
                         <outlet property="tableView" destination="Oiu-me-FfP" id="R19-NA-QOJ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="cellSegue" id="A4t-Ux-ucK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtP-L7-QDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

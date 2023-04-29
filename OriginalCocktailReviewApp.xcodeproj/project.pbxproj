@@ -16,7 +16,7 @@
 		D1C1B9DE29FBAD8A00954BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C1B9DC29FBAD8A00954BA0 /* Main.storyboard */; };
 		D1C1B9E029FBAD8C00954BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C1B9DF29FBAD8C00954BA0 /* Assets.xcassets */; };
 		D1C1B9E329FBAD8C00954BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C1B9E129FBAD8C00954BA0 /* LaunchScreen.storyboard */; };
-		D1C1B9EE29FBAE4B00954BA0 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9ED29FBAE4B00954BA0 /* TabBarControllerViewController.swift */; };
+		D1C1B9EE29FBAE4B00954BA0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9ED29FBAE4B00954BA0 /* TabBarController.swift */; };
 		D1C1B9F029FBAEA300954BA0 /* ReviewCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9EF29FBAEA300954BA0 /* ReviewCocktailViewController.swift */; };
 		D1C1B9F229FBAECC00954BA0 /* DisplayCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9F129FBAECC00954BA0 /* DisplayCocktailViewController.swift */; };
 		D1C1B9F529FBAF1200954BA0 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1B9F429FBAF1200954BA0 /* Cocktail.swift */; };
@@ -35,7 +35,7 @@
 		D1C1B9DF29FBAD8C00954BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1C1B9E229FBAD8C00954BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1C1B9E429FBAD8C00954BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1C1B9ED29FBAE4B00954BA0 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
+		D1C1B9ED29FBAE4B00954BA0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D1C1B9EF29FBAEA300954BA0 /* ReviewCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCocktailViewController.swift; sourceTree = "<group>"; };
 		D1C1B9F129FBAECC00954BA0 /* DisplayCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCocktailViewController.swift; sourceTree = "<group>"; };
 		D1C1B9F429FBAF1200954BA0 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				D1C1B9DA29FBAD8A00954BA0 /* RegisterCocktailViewController.swift */,
-				D1C1B9ED29FBAE4B00954BA0 /* TabBarControllerViewController.swift */,
+				D1C1B9ED29FBAE4B00954BA0 /* TabBarController.swift */,
 				D1C1B9EF29FBAEA300954BA0 /* ReviewCocktailViewController.swift */,
 				D1C1B9F129FBAECC00954BA0 /* DisplayCocktailViewController.swift */,
 			);
@@ -269,7 +269,7 @@
 				D1C1B9F529FBAF1200954BA0 /* Cocktail.swift in Sources */,
 				D1C1B9DB29FBAD8A00954BA0 /* RegisterCocktailViewController.swift in Sources */,
 				D1C1B9D729FBAD8A00954BA0 /* AppDelegate.swift in Sources */,
-				D1C1B9EE29FBAE4B00954BA0 /* TabBarControllerViewController.swift in Sources */,
+				D1C1B9EE29FBAE4B00954BA0 /* TabBarController.swift in Sources */,
 				D1C1B9F029FBAEA300954BA0 /* ReviewCocktailViewController.swift in Sources */,
 				D1C1B9D929FBAD8A00954BA0 /* SceneDelegate.swift in Sources */,
 				D1C1B9F229FBAECC00954BA0 /* DisplayCocktailViewController.swift in Sources */,
