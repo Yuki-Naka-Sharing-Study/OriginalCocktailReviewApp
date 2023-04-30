@@ -53,6 +53,7 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
         // outlet接続をしたLabelにカクテルのタイトルを表示する処理
         self.cocktailNameLabel.text = "\(cocktail.name)"
         self.cocktailReviewLabel.text = "\(cocktail.review)"
+        self.cocktailMakeLabel.text = "\(cocktail.make)"
         
     }
     

@@ -89,7 +89,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjf-7t-7X8">
                                 <rect key="frame" x="10" y="734" width="146" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="カクテルを管理"/>
+                                <buttonConfiguration key="configuration" style="plain" title="カクテルを登録"/>
                                 <connections>
                                     <action selector="registerCocktail:" destination="2Jv-WO-qsq" eventType="touchUpInside" id="wsp-Kb-ExV"/>
                                 </connections>
