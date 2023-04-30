@@ -1,4 +1,5 @@
 import UIKit
+import Cosmos
 import RealmSwift
 import CLImageEditor
 import IQKeyboardManagerSwift
@@ -10,6 +11,8 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
     @IBOutlet weak var cocktailReviewTextView: UITextView!
     @IBOutlet weak var cocktailNameTextField: UITextField!
     
+    @IBOutlet weak var cosmosView: CosmosView!
+    
     let realm = try! Realm()
     var cocktail: Cocktail!
     
@@ -20,7 +23,20 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
         
+        setup()
     }
+    
+    private func setup() {
+        //星の数の初期表示数(0に設定)
+        cosmosView.rating = 0
+        
+    }
+    
+//    @IBAction func rateStarsAction(_ sender: UIButton) {
+//        //押されたボタンの数に応じて表示する星の数を変更する
+//        cosmosView.rating = Double(sender.tag)
+//
+//    }
     
     @objc func dismissKeyboard(){
         
