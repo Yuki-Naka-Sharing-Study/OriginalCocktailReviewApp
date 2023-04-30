@@ -1,6 +1,7 @@
 import UIKit
 import RealmSwift
 import CLImageEditor
+import IQKeyboardManagerSwift
 
 class RegisterCocktailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLImageEditorDelegate {
     

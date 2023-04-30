@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // ライブラリ有効化
+        IQKeyboardManager.shared.enable = true
+        // キーボードの上のToolbar「「Done」ボタンがあるエリア」を非表示にする
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        // 外側をタップしたときにキーボードを閉じる
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
         return true
     }
 

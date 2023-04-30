@@ -1,5 +1,6 @@
 import UIKit
 import RealmSwift
+import IQKeyboardManagerSwift
 
 class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
     
