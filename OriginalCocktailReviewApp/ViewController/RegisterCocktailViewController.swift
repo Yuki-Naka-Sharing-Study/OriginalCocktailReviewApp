@@ -8,10 +8,9 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
     
     @IBOutlet weak var cocktailImageView: UIImageView!
     @IBOutlet weak var cocktailMakeTextView: UITextView!
+    @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var cocktailReviewTextView: UITextView!
     @IBOutlet weak var cocktailNameTextField: UITextField!
-    
-    @IBOutlet weak var cosmosView: CosmosView!
     
     let realm = try! Realm()
     var cocktail: Cocktail!
@@ -24,6 +23,7 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
         self.view.addGestureRecognizer(tapGesture)
         
         setup()
+        
     }
     
     private func setup() {
@@ -31,12 +31,7 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
         cosmosView.rating = 0
         
     }
-    
-//    @IBAction func rateStarsAction(_ sender: UIButton) {
-//        //押されたボタンの数に応じて表示する星の数を変更する
-//        cosmosView.rating = Double(sender.tag)
-//
-//    }
+
     
     @objc func dismissKeyboard(){
         
@@ -69,6 +64,7 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
             
             self.cocktail.image = self.cocktailImageView.image!.jpegData(compressionQuality: 1)
             self.cocktail.make = self.cocktailMakeTextView.text!
+//            self.cocktail.cosmos = self.cosmosView.rating!
             self.cocktail.review = self.cocktailReviewTextView.text!
             self.cocktail.name = self.cocktailNameTextField.text!
             self.realm.add(self.cocktail, update: .modified)

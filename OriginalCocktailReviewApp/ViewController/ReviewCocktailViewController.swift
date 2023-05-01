@@ -1,4 +1,5 @@
 import UIKit
+import Cosmos
 import RealmSwift
 
 class ReviewCocktailViewController: UIViewController {
@@ -40,8 +41,10 @@ class ReviewCocktailViewController: UIViewController {
         let DisplayCocktailViewController:DisplayCocktailViewController = segue.destination as! DisplayCocktailViewController
         
         if segue.identifier == "cellSegue" {
+            
             let indexPath = self.tableView.indexPathForSelectedRow
             DisplayCocktailViewController.cocktail = cocktailArray[indexPath!.row]
+            
         }
         
     }

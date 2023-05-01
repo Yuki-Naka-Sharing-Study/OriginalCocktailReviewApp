@@ -1,4 +1,5 @@
 import UIKit
+import Cosmos
 import RealmSwift
 import IQKeyboardManagerSwift
 
@@ -20,14 +21,20 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
     }
     
     @IBAction func deleteCocktailData(_ sender: Any) {
-        // データベースから削除する
-        try! realm.write {
-            
-            self.realm.delete(self.cocktail)
-            
-        }
         
-        self.dismiss(animated: true, completion: nil)
+        let alert = UIAlertController(title: "カクテルを削除しますが宜しいでしょうか？", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "削除", style: .destructive, handler: { _ in
+            
+            try! self.realm.write {
+                
+                self.realm.delete(self.cocktail)
+                
+            }
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -54,6 +61,7 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
         self.cocktailNameLabel.text = "\(cocktail.name)"
         self.cocktailReviewLabel.text = "\(cocktail.review)"
         self.cocktailMakeLabel.text = "\(cocktail.make)"
+//        self.cosmosView.rating = "\(cocktail.cosmos)"
         
     }
     
