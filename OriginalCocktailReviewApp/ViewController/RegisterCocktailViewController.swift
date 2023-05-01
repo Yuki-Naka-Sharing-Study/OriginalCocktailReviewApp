@@ -29,6 +29,8 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
     private func setup() {
         //星の数の初期表示数(0に設定)
         cosmosView.rating = 0
+        // スター半分の評価ができるようにする
+        cosmosView.settings.fillMode = .half
         
     }
 
@@ -64,7 +66,7 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
             
             self.cocktail.image = self.cocktailImageView.image!.jpegData(compressionQuality: 1)
             self.cocktail.make = self.cocktailMakeTextView.text!
-//            self.cocktail.cosmos = self.cosmosView.rating!
+//            self.cocktail.cosmos = self.cosmosView.rating
             self.cocktail.review = self.cocktailReviewTextView.text!
             self.cocktail.name = self.cocktailNameTextField.text!
             self.realm.add(self.cocktail, update: .modified)
