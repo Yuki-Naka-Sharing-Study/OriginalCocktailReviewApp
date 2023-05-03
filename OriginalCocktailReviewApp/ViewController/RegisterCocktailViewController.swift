@@ -6,6 +6,7 @@ import IQKeyboardManagerSwift
 
 class RegisterCocktailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLImageEditorDelegate {
     
+    // @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var cocktailImageView: UIImageView!
     @IBOutlet weak var cocktailMakeTextView: UITextView!
     @IBOutlet weak var cosmosView: CosmosView!
@@ -33,7 +34,6 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
         cosmosView.settings.fillMode = .half
         
     }
-
     
     @objc func dismissKeyboard(){
         
