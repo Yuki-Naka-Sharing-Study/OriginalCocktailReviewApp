@@ -69,7 +69,7 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
         try! realm.write {
             
             self.cocktail.image = self.cocktailImageView.image!.jpegData(compressionQuality: 1)
-            self.cocktail.image = self.cocktailRatingImageView.image!.jpegData(compressionQuality: 1)
+            self.cocktail.image2 = self.cocktailRatingImageView.image!.jpegData(compressionQuality: 1)
             self.cocktail.make = self.cocktailMakeTextView.text!
             self.cocktail.review = self.cocktailReviewTextView.text!
             self.cocktail.name = self.cocktailNameTextField.text!

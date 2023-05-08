@@ -57,11 +57,23 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
             
         }
         
+        if cocktail.image2 != nil {
+            
+            let imageData = UIImage(data: cocktail.image2!)!
+            cocktailRatingImageView.image = imageData
+            
+        } else {
+            
+            print("There is no image...")
+            
+        }
+        
         // outlet接続をしたLabelにカクテルのタイトルを表示する処理
         self.cocktailNameLabel.text = "\(cocktail.name)"
         self.cocktailReviewLabel.text = "\(cocktail.review)"
         self.cocktailMakeLabel.text = "\(cocktail.make)"
-
+        // self.cocktailRatingImageView.image = "\(cocktail.image)"
+ 
     }
     
 }
