@@ -1,5 +1,4 @@
 import UIKit
-import Cosmos
 import RealmSwift
 import IQKeyboardManagerSwift
 
@@ -9,17 +8,15 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
     var cocktail: Cocktail!
     
     @IBOutlet private weak var cocktailImageView: UIImageView!
-    @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var cocktailNameLabel: UILabel!
-    @IBOutlet weak var cocktailMakeLabel: UILabel!
+    @IBOutlet weak var cocktailRatingImageView: UIImageView!
     @IBOutlet weak var cocktailReviewLabel: UILabel!
+    @IBOutlet weak var cocktailMakeLabel: UILabel!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         setCocktail(cocktail)
-        // スター半分の評価ができるようにする
-        cosmosView.settings.fillMode = .half
         
     }
     
@@ -64,8 +61,7 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
         self.cocktailNameLabel.text = "\(cocktail.name)"
         self.cocktailReviewLabel.text = "\(cocktail.review)"
         self.cocktailMakeLabel.text = "\(cocktail.make)"
-//        self.cosmosView.rating = Double(cocktail.cosmos)
-        
+
     }
     
 }

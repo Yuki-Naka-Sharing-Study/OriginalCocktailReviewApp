@@ -1,5 +1,4 @@
 import UIKit
-import Cosmos
 import RealmSwift
 import CLImageEditor
 import IQKeyboardManagerSwift
@@ -9,12 +8,18 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
     // @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var cocktailImageView: UIImageView!
     @IBOutlet weak var cocktailMakeTextView: UITextView!
-    @IBOutlet weak var cosmosView: CosmosView!
+    @IBOutlet weak var cocktailRatingImageView: UIImageView!
     @IBOutlet weak var cocktailReviewTextView: UITextView!
     @IBOutlet weak var cocktailNameTextField: UITextField!
     
     let realm = try! Realm()
     var cocktail: Cocktail!
+    var rating: Int = 0 {
+        didSet {
+            let imageName = "star\(rating)"
+            cocktailRatingImageView.image = UIImage(named: imageName)
+        }
+    }
     
     override func viewDidLoad() {
         
@@ -22,16 +27,6 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
-        
-        setup()
-        
-    }
-    
-    private func setup() {
-        //星の数の初期表示数(0に設定)
-        cosmosView.rating = 0
-        // スター半分の評価ができるようにする
-        cosmosView.settings.fillMode = .half
         
     }
     
@@ -41,12 +36,21 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
         
     }
     
+    @IBAction func ratingButtonTapped(_ sender: UIButton) {
+        // rating を更新します。
+        if rating == 5 {
+            rating = 0
+        }
+        rating += 1
+    }
+    
     @IBAction func registerCocktail(_ sender: Any) {
         
-        if cocktailImageView.image == nil || cocktailMakeTextView.text == "" ||
-            cocktailReviewTextView.text == "" || cocktailNameTextField.text == "" {
+        if cocktailImageView.image == nil || cocktailNameTextField.text == "" ||
+            cocktailRatingImageView.image == nil || cocktailReviewTextView.text == "" ||
+            cocktailMakeTextView.text == "" {
             
-            let alert = UIAlertController(title: "エラーメッセージ", message: "「カクテルの画像」「カクテルの作り方」「カクテルの感想」「カクテルの名前」のいずれかが入力されていません。",
+            let alert = UIAlertController(title: "エラーメッセージ", message: "「カクテルの画像」「カクテルの名前」「カクテルのレビュー」「カクテルの感想」「カクテルの作り方」のいずれかが入力されていません。",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -65,8 +69,8 @@ class RegisterCocktailViewController: UIViewController, UIImagePickerControllerD
         try! realm.write {
             
             self.cocktail.image = self.cocktailImageView.image!.jpegData(compressionQuality: 1)
+            self.cocktail.image = self.cocktailRatingImageView.image!.jpegData(compressionQuality: 1)
             self.cocktail.make = self.cocktailMakeTextView.text!
-//            self.cocktail.cosmos = self.cosmosView.rating
             self.cocktail.review = self.cocktailReviewTextView.text!
             self.cocktail.name = self.cocktailNameTextField.text!
             self.realm.add(self.cocktail, update: .modified)
