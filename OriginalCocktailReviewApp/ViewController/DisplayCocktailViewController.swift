@@ -72,7 +72,6 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
         self.cocktailNameLabel.text = "\(cocktail.name)"
         self.cocktailReviewLabel.text = "\(cocktail.review)"
         self.cocktailMakeLabel.text = "\(cocktail.make)"
-        // self.cocktailRatingImageView.image = "\(cocktail.image)"
  
     }
     

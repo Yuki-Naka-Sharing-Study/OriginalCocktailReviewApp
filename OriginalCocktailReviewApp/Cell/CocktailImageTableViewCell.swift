@@ -3,6 +3,7 @@ import UIKit
 class CocktailImageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cocktailImageView: UIImageView!
+    @IBOutlet weak var cocktailRatingImageView: UIImageView!
     @IBOutlet weak var cocktailNameLabel: UILabel!
     
     override func awakeFromNib() {
@@ -23,6 +24,17 @@ class CocktailImageTableViewCell: UITableViewCell {
             
             let imageData = UIImage(data: cocktail.image!)!
             cocktailImageView.image = imageData
+            
+        } else {
+            
+            print("There is no image...")
+            
+        }
+        
+        if cocktail.image2 != nil {
+            
+            let imageData = UIImage(data: cocktail.image2!)!
+            cocktailRatingImageView.image = imageData
             
         } else {
             
