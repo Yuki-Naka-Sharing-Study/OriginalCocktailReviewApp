@@ -3,7 +3,6 @@ import UIKit
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         // タブアイコンの色
         self.tabBar.tintColor = UIColor(red: 1.0, green: 0.44, blue: 0.11, alpha: 1)
@@ -14,14 +13,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.tabBar.scrollEdgeAppearance = appearance
         // UITabBarControllerDelegateプロトコルのメソッドをこのクラスで処理する。
         self.delegate = self
-        
     }
-    
     // タブバーのアイコンがタップされた時に呼ばれるdelegateメソッドを処理する。
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
         return true
-        
     }
     
 }
