@@ -1,0 +1,36 @@
+PODS:
+  - CLImageEditor (0.2.4):
+    - CLImageEditor/Core (= 0.2.4)
+  - CLImageEditor/Core (0.2.4)
+  - Cosmos (23.0.0)
+  - IQKeyboardManagerSwift (6.5.11)
+  - Realm (10.39.0):
+    - Realm/Headers (= 10.39.0)
+  - Realm/Headers (10.39.0)
+  - RealmSwift (10.39.0):
+    - Realm (= 10.39.0)
+
+DEPENDENCIES:
+  - CLImageEditor
+  - Cosmos
+  - IQKeyboardManagerSwift
+  - RealmSwift
+
+SPEC REPOS:
+  trunk:
+    - CLImageEditor
+    - Cosmos
+    - IQKeyboardManagerSwift
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  CLImageEditor: dc3e5358f641368da3a76fc1c744a4c2ceb270ad
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
+  Realm: c1334b2243da676ce77c28d4f21a67c8d561a9f9
+  RealmSwift: 618cb32040ce8de250ae6c509218ee0ead17dcf6
+
+PODFILE CHECKSUM: ff579a12b360aea843133b0a23b968fd87dc62b6
+
+COCOAPODS: 1.12.1

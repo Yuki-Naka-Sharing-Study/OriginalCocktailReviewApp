@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "cosmos#readme",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/Cosmos#readme",
+      "state" : {
+        "branch" : "master",
+        "revision" : "cce521e734d0090494bd4afab5fd2e2f2465c1af"
+      }
+    }
+  ],
+  "version" : 2
+}
