@@ -3,15 +3,14 @@ import RealmSwift
 import IQKeyboardManagerSwift
 
 class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
+    @IBOutlet private weak var cocktailImageView: UIImageView!
+    @IBOutlet private weak var cocktailNameLabel: UILabel!
+    @IBOutlet private weak var cocktailRatingImageView: UIImageView!
+    @IBOutlet private weak var cocktailReviewLabel: UILabel!
+    @IBOutlet private weak var cocktailMakeLabel: UILabel!
     
     private let realm = try! Realm()
     var cocktail: Cocktail!
-    
-    @IBOutlet private weak var cocktailImageView: UIImageView!
-    @IBOutlet weak var cocktailNameLabel: UILabel!
-    @IBOutlet weak var cocktailRatingImageView: UIImageView!
-    @IBOutlet weak var cocktailReviewLabel: UILabel!
-    @IBOutlet weak var cocktailMakeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +29,11 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func Close(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     // CocktailImageTableViewCell から参考にしたコード
-    func setCocktail(_ cocktail: Cocktail) {
+    private func setCocktail(_ cocktail: Cocktail) {
         if cocktail.image != nil {
             let imageData = UIImage(data: cocktail.image!)!
             cocktailImageView.image = imageData

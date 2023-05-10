@@ -2,7 +2,6 @@ import UIKit
 import RealmSwift
 
 class ReviewCocktailViewController: UIViewController {
-    
     @IBOutlet private weak var tableView: UITableView!
     
     private let realm = try! Realm()
@@ -10,9 +9,6 @@ class ReviewCocktailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // カスタムセルを登録する
-        let nib = UINib(nibName: "CocktailImageTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CocktailImageTableViewCell")
         setupView()
     }
     // 入力画面から戻ってきた時に TableView を更新させる
@@ -22,17 +18,21 @@ class ReviewCocktailViewController: UIViewController {
     }
     
     private func setupView() {
+        // カスタムセルを登録する
+        let nib = UINib(nibName: "CocktailImageTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CocktailImageTableViewCell")
+        
         tableView.fillerRowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
     }
     // segueが動作することをViewControllerに通知するメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let DisplayCocktailViewController:DisplayCocktailViewController = segue.destination as! DisplayCocktailViewController
+        let DisplayCocktailViewController = segue.destination as! DisplayCocktailViewController
         
-        if segue.identifier == "cellSegue" {
-            let indexPath = self.tableView.indexPathForSelectedRow
-            DisplayCocktailViewController.cocktail = cocktailArray[indexPath!.row]
+        if let indexPath = self.tableView.indexPathForSelectedRow,
+           segue.identifier == "cellSegue" {
+            DisplayCocktailViewController.cocktail = cocktailArray[indexPath.row]
         }
     }
 }
@@ -51,9 +51,11 @@ extension ReviewCocktailViewController: UITableViewDelegate, UITableViewDataSour
     }
     // 各セルを選択した時に実行されるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "cellSegue",sender: nil)}
+        performSegue(withIdentifier: "cellSegue",sender: nil)
+    }
     // セルが削除が可能なことを伝えるメソッド
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle { .delete }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle { .delete
+    }
     // Delete ボタンが押された時に呼ばれるメソッド
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
