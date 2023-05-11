@@ -34,15 +34,27 @@ class DisplayCocktailViewController: UIViewController,UITableViewDelegate {
     }
     // CocktailImageTableViewCell から参考にしたコード
     private func setCocktail(_ cocktail: Cocktail) {
-        if cocktail.image != nil {
-            let imageData = UIImage(data: cocktail.image!)!
+//        if cocktail.image != nil {
+//            let imageData = UIImage(data: cocktail.image!)!
+//            cocktailImageView.image = imageData
+//        } else {
+//            print("There is no image...")
+//        }
+//
+//        if cocktail.starImage != nil {
+//            let imageData = UIImage(data: cocktail.starImage!)!
+//            cocktailRatingImageView.image = imageData
+//        } else {
+//            print("There is no image...")
+//        }
+        //「!」を使わずに書き変えたコード
+        if let image = cocktail.image, let imageData = UIImage(data: image) {
             cocktailImageView.image = imageData
         } else {
             print("There is no image...")
         }
         
-        if cocktail.image2 != nil {
-            let imageData = UIImage(data: cocktail.image2!)!
+        if let starImage = cocktail.starImage, let imageData = UIImage(data: starImage) {
             cocktailRatingImageView.image = imageData
         } else {
             print("There is no image...")

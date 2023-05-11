@@ -14,9 +14,5 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         // UITabBarControllerDelegateプロトコルのメソッドをこのクラスで処理する。
         self.delegate = self
     }
-    // タブバーのアイコンがタップされた時に呼ばれるdelegateメソッドを処理する。
-//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//        return true
-//    }
     
 }

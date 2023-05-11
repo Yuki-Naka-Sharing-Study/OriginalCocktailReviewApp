@@ -22,8 +22,8 @@ class CocktailImageTableViewCell: UITableViewCell {
             print("There is no image...")
         }
         
-        if cocktail.image2 != nil {
-            let imageData = UIImage(data: cocktail.image2!)!
+        if cocktail.starImage != nil {
+            let imageData = UIImage(data: cocktail.starImage!)!
             cocktailRatingImageView.image = imageData
         } else {
             print("There is no image...")
