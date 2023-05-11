@@ -20,7 +20,7 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
         }
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
     }
     /// 画面全体の空いているところをタップしたら呼ばれる
@@ -91,11 +91,11 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
         }
         
         try! realm.write {
-            self.cocktail.image = self.cocktailImageView.jpegData(compressionQuality: 1)
-            self.cocktail.starImage = self.cocktailRatingImageView.jpegData(compressionQuality: 1)
-            self.cocktail.make = self.cocktailMakeTextView
-            self.cocktail.review = self.cocktailReviewTextView
-            self.cocktail.name = self.cocktailNameTextField
+            self.cocktail.image = cocktailImage.jpegData(compressionQuality: 1)
+            self.cocktail.reviewImageData = cocktailRatingImage.jpegData(compressionQuality: 1)
+            self.cocktail.make = cocktailMakeText
+            self.cocktail.review = cocktailReviewText
+            self.cocktail.name = cocktailNameText
             self.realm.add(self.cocktail, update: .modified)
         }
     }
@@ -123,11 +123,11 @@ extension RegisterCocktailViewController: UIImagePickerControllerDelegate, CLIma
     func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
         // imageViewに画像を渡す
         cocktailImageView.image = image
-        editor.dismiss(animated: true, completion: nil)
+        editor.dismiss(animated: true)
     }
     //     CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド
     func imageEditorDidCancel(_ editor: CLImageEditor!) {
         // CLImageEditor画面を閉じる
-        editor.dismiss(animated: true, completion: nil)
+        editor.dismiss(animated: true)
     }
 }

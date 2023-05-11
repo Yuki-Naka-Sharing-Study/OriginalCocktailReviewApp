@@ -15,21 +15,19 @@ class CocktailImageTableViewCell: UITableViewCell {
     }
     
     func setCocktail(_ cocktail: Cocktail) {
-        if cocktail.image != nil {
-            let imageData = UIImage(data: cocktail.image!)!
+        if let image = cocktail.image, let imageData = UIImage(data: image) {
             cocktailImageView.image = imageData
         } else {
             print("There is no image...")
         }
         
-        if cocktail.starImage != nil {
-            let imageData = UIImage(data: cocktail.starImage!)!
+        if let starImage = cocktail.reviewImageData, let imageData = UIImage(data: starImage) {
             cocktailRatingImageView.image = imageData
         } else {
             print("There is no image...")
         }
         // outlet接続をしたLabelにカクテルのタイトルを表示する処理
-        self.cocktailNameLabel.text = "\(cocktail.name)"
+        self.cocktailNameLabel.text = cocktail.name
         
     }
     

@@ -16,16 +16,6 @@ class ReviewCocktailViewController: UIViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-    
-    private func setupView() {
-        // カスタムセルを登録する
-        let nib = UINib(nibName: "CocktailImageTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CocktailImageTableViewCell")
-        
-        tableView.fillerRowHeight = UITableView.automaticDimension
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
     // segueが動作することをViewControllerに通知するメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let DisplayCocktailViewController = segue.destination as! DisplayCocktailViewController
@@ -34,6 +24,15 @@ class ReviewCocktailViewController: UIViewController {
            segue.identifier == "cellSegue" {
             DisplayCocktailViewController.cocktail = cocktailArray[indexPath.row]
         }
+    }
+    private func setupView() {
+        // カスタムセルを登録する
+        let nib = UINib(nibName: "CocktailImageTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CocktailImageTableViewCell")
+        
+        tableView.fillerRowHeight = UITableView.automaticDimension
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 }
 
@@ -49,13 +48,16 @@ extension ReviewCocktailViewController: UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
     // 各セルを選択した時に実行されるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "cellSegue",sender: nil)
     }
+    
     // セルが削除が可能なことを伝えるメソッド
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle { .delete
     }
+    
     // Delete ボタンが押された時に呼ばれるメソッド
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

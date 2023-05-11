@@ -7,7 +7,7 @@ class Cocktail: Object {
     // カクテルの名前
     @objc dynamic var name = ""
     // カクテルの星５段階評価 (新しく追加）
-    @objc dynamic var starImage: Data? = nil
+    @objc dynamic var reviewImageData: Data? = nil
     // カクテルの感想
     @objc dynamic var review = ""
     // カクテルのレシピ
