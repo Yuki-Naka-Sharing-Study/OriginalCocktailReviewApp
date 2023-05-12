@@ -46,11 +46,13 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
             showErrorAlert()
             return
         }
+        print(cocktailImage)
         saveCocktailData(cocktailImage: cocktailImage,
                          cocktailNameText: cocktailNameText,
                          cocktailRatingImage: cocktailRatingImage,
                          cocktailReviewText: cocktailReviewText,
                          cocktailMakeText: cocktailMakeText)
+        print(cocktailImage)
     }
     
     @IBAction func getImage(_ sender: Any) {
@@ -98,6 +100,7 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
             self.cocktail.name = cocktailNameText
             self.realm.add(self.cocktail, update: .modified)
         }
+        print(cocktailImage)
     }
 }
 
