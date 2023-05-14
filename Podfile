@@ -6,7 +6,6 @@ target 'OriginalCocktailReviewApp' do
   use_frameworks!
 
   # Pods for OriginalCocktailReviewApp
-  pod 'Cosmos'
   pod 'RealmSwift'
   pod 'CLImageEditor'
   pod 'IQKeyboardManagerSwift'

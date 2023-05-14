@@ -46,13 +46,11 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
             showErrorAlert()
             return
         }
-        print(cocktailImage)
         saveCocktailData(cocktailImage: cocktailImage,
                          cocktailNameText: cocktailNameText,
                          cocktailRatingImage: cocktailRatingImage,
                          cocktailReviewText: cocktailReviewText,
                          cocktailMakeText: cocktailMakeText)
-        print(cocktailImage)
     }
     
     @IBAction func getImage(_ sender: Any) {
@@ -62,6 +60,7 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
             let pickerController = UIImagePickerController()
             pickerController.delegate = self
             pickerController.sourceType = .camera
+            print("camera")
             self.present(pickerController, animated: true)
         }
     }
@@ -85,13 +84,12 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
                                   cocktailRatingImage: UIImage,
                                   cocktailReviewText: String,
                                   cocktailMakeText: String) {
-        
         cocktail = Cocktail()
         let allCocktails = realm.objects(Cocktail.self)
+        
         if allCocktails.count != 0 {
             cocktail.id = allCocktails.max(ofProperty: "id")! + 1
         }
-        
         try! realm.write {
             self.cocktail.image = cocktailImage.jpegData(compressionQuality: 1)
             self.cocktail.reviewImageData = cocktailRatingImage.jpegData(compressionQuality: 1)
@@ -100,7 +98,6 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
             self.cocktail.name = cocktailNameText
             self.realm.add(self.cocktail, update: .modified)
         }
-        print(cocktailImage)
     }
 }
 
@@ -115,22 +112,28 @@ extension RegisterCocktailViewController: UIImagePickerControllerDelegate, CLIma
             self.present(editor, animated: true)
         }
         // UIImagePickerController画面を閉じる
+        print("e")
         picker.dismiss(animated: true)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // UIImagePickerController画面を閉じる
+        print("f")
         picker.dismiss(animated: true)
     }
     //     CLImageEditorで加工が終わったときに呼ばれるメソッド
     func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
         // imageViewに画像を渡す
+        print("a")
         cocktailImageView.image = image
+        print("b")
         editor.dismiss(animated: true)
     }
     //     CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド
     func imageEditorDidCancel(_ editor: CLImageEditor!) {
         // CLImageEditor画面を閉じる
+        print("c")
         editor.dismiss(animated: true)
+        print("d")
     }
 }
