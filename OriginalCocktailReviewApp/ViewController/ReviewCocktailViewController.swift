@@ -30,7 +30,11 @@ class ReviewCocktailViewController: UIViewController {
         let nib = UINib(nibName: "CocktailImageTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CocktailImageTableViewCell")
         
-        tableView.fillerRowHeight = UITableView.automaticDimension
+        if #available(iOS 15.0, *) {
+            tableView.fillerRowHeight = UITableView.automaticDimension
+        } else {
+            // Fallback on earlier versions
+        }
         tableView.delegate = self
         tableView.dataSource = self
     }

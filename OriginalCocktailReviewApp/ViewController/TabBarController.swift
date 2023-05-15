@@ -1,5 +1,6 @@
 import UIKit
 
+@available(iOS 13.0, *)
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
@@ -10,7 +11,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let appearance = UITabBarAppearance()
         appearance.backgroundColor =  UIColor(red: 0.96, green: 0.91, blue: 0.87, alpha: 1)
         self.tabBar.standardAppearance = appearance
-        self.tabBar.scrollEdgeAppearance = appearance
+        if #available(iOS 15.0, *) {
+            self.tabBar.scrollEdgeAppearance = appearance
+        } else {
+            // Fallback on earlier versions
+        }
         // UITabBarControllerDelegateプロトコルのメソッドをこのクラスで処理する。
         self.delegate = self
     }
