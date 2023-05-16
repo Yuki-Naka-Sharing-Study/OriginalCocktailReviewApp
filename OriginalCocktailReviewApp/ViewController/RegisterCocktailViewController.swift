@@ -20,13 +20,15 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
         }
     }
     
-    override func viewDidLoad(){
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     /// 画面全体の空いているところをタップしたら呼ばれる
-    @objc func dismissKeyboard(){
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
     /// レビューボタンタップ時に呼ばれる
     @IBAction func ratingButtonTapped(_ sender: UIButton) {
         // rating を更新します。
@@ -35,6 +37,7 @@ class RegisterCocktailViewController: UIViewController, UINavigationControllerDe
         }
         rating += 1
     }
+    
     /// 登録ボタンタップ時に呼ばれる
     @IBAction func registerCocktail(_ sender: Any) {
         guard let cocktailImage = cocktailImageView.image,
@@ -121,6 +124,7 @@ extension RegisterCocktailViewController: UIImagePickerControllerDelegate, CLIma
         print("f")
         picker.dismiss(animated: true)
     }
+    
     //     CLImageEditorで加工が終わったときに呼ばれるメソッド
     func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
         // imageViewに画像を渡す
@@ -129,6 +133,7 @@ extension RegisterCocktailViewController: UIImagePickerControllerDelegate, CLIma
         print("b")
         editor.dismiss(animated: true)
     }
+    
     //     CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド
     func imageEditorDidCancel(_ editor: CLImageEditor!) {
         // CLImageEditor画面を閉じる

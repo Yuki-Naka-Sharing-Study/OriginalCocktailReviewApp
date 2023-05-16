@@ -11,11 +11,13 @@ class ReviewCocktailViewController: UIViewController {
         super.viewDidLoad()
         setupView()
     }
+    
     // 入力画面から戻ってきた時に TableView を更新させる
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+    
     // segueが動作することをViewControllerに通知するメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let DisplayCocktailViewController = segue.destination as! DisplayCocktailViewController
