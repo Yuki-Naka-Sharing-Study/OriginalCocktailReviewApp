@@ -108,37 +108,31 @@ extension RegisterCocktailViewController: UIImagePickerControllerDelegate, CLIma
     //     写真を撮影/選択したときに呼ばれるメソッド
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // UIImagePickerController画面を閉じる
+        picker.dismiss(animated: true)
         // 画像加工処理
-        if let originalImage = info[.originalImage]as? UIImage,
+        if let originalImage = info[.originalImage] as? UIImage,
            let editor = CLImageEditor(image: originalImage) {
             editor.delegate = self
             self.present(editor, animated: true)
         }
-        // UIImagePickerController画面を閉じる
-        print("e")
-        picker.dismiss(animated: true)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // UIImagePickerController画面を閉じる
-        print("f")
         picker.dismiss(animated: true)
     }
     
     //     CLImageEditorで加工が終わったときに呼ばれるメソッド
     func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
         // imageViewに画像を渡す
-        print("a")
         cocktailImageView.image = image
-        print("b")
         editor.dismiss(animated: true)
     }
     
     //     CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド
     func imageEditorDidCancel(_ editor: CLImageEditor!) {
         // CLImageEditor画面を閉じる
-        print("c")
         editor.dismiss(animated: true)
-        print("d")
     }
 }
